@@ -1,0 +1,31 @@
+<html>
+   <head>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+       <link href="css/smoothness/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+       <script>
+           $(document).ready(function() {
+               function goRefreshTab() {
+
+                   alert("refreshTabFunc click... ");
+                   //console.log("refreshTabFunc click."); // HTML Console에 Log 출력. IE에서는 console 에러발생.
+               }
+               refreshTabFunc = goRefreshTab; // javascript 함수에 jQuery 함수 대입.
+           });
+
+           // javascript 함수 정의
+           function refreshTab() {
+               alert("javascript refreshTab() function called.");
+               refreshTabFunc(); // javascript 함수 호출
+           }
+       </script>
+   </head>
+
+   <body>
+       <a href="#" onClick="refreshTab()" ><img src="/images/button/refresh.png" border="0" alt="Refresh" title="Refresh" /></a>
+       <a href="#" onClick="refreshTabFunc()" ><img src="/images/button/refresh.png" border="0" alt="Refresh" title="Refresh" /></a>
+   </body>
+</html>
+
+
+ 
